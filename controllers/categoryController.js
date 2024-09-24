@@ -16,3 +16,12 @@ exports.createCategory = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
+
+exports.getAllCategories = async (req, res) => {
+    try {
+        const categories = await Category.findAll();
+        res.json(categories);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
