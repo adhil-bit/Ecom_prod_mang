@@ -1,0 +1,26 @@
+{
+  "name": "ecom_prod_mang",
+  "version": "1.0.0",
+  "description": "E-commerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adhil-bit/Ecom_prod_mang.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adhil-bit/Ecom_prod_mang/issues"
+  },
+  "homepage": "https://github.com/adhil-bit/Ecom_prod_mang#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.3"
+  }
+}
