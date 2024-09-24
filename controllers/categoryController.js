@@ -6,6 +6,10 @@ exports.createCategory = async (req, res) => {
         if (!name) {
             return res.status(400).json({ error: "Category name is required" });
         }
+        const duplicationcheck = await Category.findOne({ name });
+        if(duplicationcheck){
+            return res.status(400).json({ error: "Category name already exist" });
+        }
         const newCategory = await Category.create({ name });
         res.status(201).json(newCategory);
     } catch (err) {
