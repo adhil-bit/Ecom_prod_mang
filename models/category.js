@@ -6,9 +6,13 @@ const Category = sequelize.define('Category', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    // createdAt:{
+    //     type:DataTypes.DATE,
+    //     defaultValue:true
+    // }
 }, {
     tableName: 'categories',
-    timestamps: true,
+    timestamps: false,
 });
 
 module.exports = Category;
