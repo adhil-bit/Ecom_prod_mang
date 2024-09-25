@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index').sequelize;
 
-const Category = sequelize.define('SubCategory', {
+const SubCategory = sequelize.define('SubCategory', {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -11,8 +11,8 @@ const Category = sequelize.define('SubCategory', {
         allowNull: false,
     }
 }, {
-    tableName: 'categories',
+    tableName: 'SubCategory',
     timestamps: false,
 });
 
-module.exports = Category;
+module.exports = SubCategory;
