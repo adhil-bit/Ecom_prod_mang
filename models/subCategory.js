@@ -6,12 +6,12 @@ const SubCategory = sequelize.define('SubCategory', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    CategoryId:{
+    categoryId:{
         type:DataTypes.INTEGER,
         allowNull: false,
     }
 }, {
-    tableName: 'SubCategory',
+    tableName: 'SubCategories',
     timestamps: false,
 });
 

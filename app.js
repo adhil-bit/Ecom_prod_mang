@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const category = require('./routes/category');
+const subCategory = require('./routes/subCategory');
+
 const { sequelize } = require('./models');
 
 dotenv.config();
@@ -13,6 +15,8 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/categories', category);
+app.use('/api/Sub-categories', subCategory);
+
 
 // // Sync Sequelize models and start server
 sequelize.sync().then(() => {
