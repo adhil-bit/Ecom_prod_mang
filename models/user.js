@@ -1,21 +1,17 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index').sequelize;
 
-const user = sequelize.define('user', {
+const users = sequelize.define('users', {
     customerId: {
         type: DataTypes.STRING,
         allowNull: false,
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.STRING,  // Ensure this field is defined
+        allowNull: false
     },
     email: {
         type: DataTypes.STRING,
-        allowNull: false,
-    },
-    mobNo:{
-        type:DataTypes.INTEGER,
         allowNull: false,
     },
     password: {
@@ -24,15 +20,19 @@ const user = sequelize.define('user', {
     },
     token: {
         type: DataTypes.STRING,
-        allowNull: false,
+        // allowNull: false,
+    },
+    refreshToken: {
+        type: DataTypes.STRING,
+        // allowNull: false,
     },
     email: {
         type: DataTypes.STRING,
         allowNull: false,
     },
 }, {
-    tableName: 'user',
+    tableName: 'users',
     timestamps: false,
 });
 
-module.exports = user;
+module.exports = users;

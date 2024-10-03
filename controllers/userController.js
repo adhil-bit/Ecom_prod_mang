@@ -1,21 +1,33 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
+const { v4: uuidv4 } = require('uuid');
+
 
 exports.signup = async (req, res) => {
     try {
-        const { email, name, password } = req.body;
+        let { email, name, password } = req.body;
+        console.log('req.body', req.body)
+        console.log('duplicationcheck')
+
         if (!email  ) {
             return res.status(400).json({ error: "email is required" });
         }
-        const duplicationcheck = await User.findOne({ email });
+        console.log('22222222duplicationcheck')
+
+        const duplicationcheck = await User.findOne({ name });
+        console.log('duplicationcheck', duplicationcheck)
+        console.log('duplicationcheck')
+
         if(duplicationcheck){
             return res.status(400).json({ error: " user already exist" });
         }
         const salt = await bcrypt.genSalt(10);
-        let newpassword = await bcrypt.hash(password, salt);
-        console.log('newpassword', newpassword)
+        password = await bcrypt.hash(password, salt);
 
-        const newuser = await User.create({ email, name, newpassword });
+        let customerId = uuidv4();
+        console.log('customerId', customerId)
+
+        const newuser = await User.create({ customerId, email, name, password });
         res.status(201).json(newuser);
     } catch (err) {
         res.status(500).json({ error: err.message });

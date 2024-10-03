@@ -14,8 +14,8 @@ module.exports = {
           type: Sequelize.DataTypes.STRING
        },
        name: {
-        allowNull: false,
-        type: Sequelize.DataTypes.STRING
+        type: Sequelize.STRING,  // Ensure this column exists
+        allowNull: false
     },
         email: {
             allowNull: false,
