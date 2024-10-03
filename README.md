@@ -9,3 +9,5 @@ update config file msql user and password
 regarding mysql 
 1. create a tanle name E-com (give a preferable anme)
 2. then via cmd type - npx sequelize-cli db:migrate
+
+Note :- added postman json file (included  responses also)
