@@ -1,4 +1,6 @@
 const User = require('../models/user');
+const Wishlist = require('../models/wishlist');
+
 const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken');
@@ -67,6 +69,44 @@ exports.login = async (req, res) => {
 
 
         res.json({ message: 'Login successful', user: userCheck , token, refreshToken});
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+exports.addToWishlist = async (req, res) => {
+    try {
+        const { customerId, productId } = req.body;
+        console.log('customerId, productId', customerId, productId)
+
+        const exists = await Wishlist.findOne({ where: { customerId, productId } });
+        if (exists) {
+            return res.status(400).json({ error: 'Product already in wishlist' });
+        }
+
+        const wishlistItem = await Wishlist.create({ customerId, productId });
+        res.status(201).json(wishlistItem);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+exports.getWishList = async (req, res) => {
+    try {
+        const { customerId } = req.body;
+        console.log('customerId', customerId);
+
+        const wishlistItems = await Wishlist.findAll({
+            where: { customerId },
+            include: [
+                {
+                    model: Product,  
+                    attributes: ['id', 'name', 'description' ,'varientDetails', 'imageUrl']  
+                }
+            ]
+        });
+
+        res.status(201).json(wishlistItems);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
