@@ -5,15 +5,9 @@ const { Op } = require('sequelize');
 exports.createProduct = async (req, res) => {
     console.log('req', req.body)
     try {
-        const { name, subCategoryId,productId, varientDetails, imageUrl, deiscription} = req.body;  // Destructure 'name' from the body
-        console.log('name, subCategoryId, varientDetails, imageUrl, deiscription', name, subCategoryId, varientDetails, imageUrl, deiscription)
-        // if (!name) {
-        //     return res.status(400).json({ error: "Product name is required" });
-        // }
-        // const duplicationcheck = await Product.findOne({ name });
-        // if(duplicationcheck){
-        //     return res.status(400).json({ error: "Product name already exist" });
-        // }
+        const { name, subCategoryId,productId, varientDetails, imageUrl, deiscription} = req.body; 
+        // console.log('name, subCategoryId, varientDetails, imageUrl, deiscription', name, subCategoryId, varientDetails, imageUrl, deiscription)
+
         const newProduct = await Product.create({ name, productId, subCategoryId, varientDetails, imageUrl, deiscription });
         res.status(201).json(newProduct);
     } catch (err) {
@@ -43,22 +37,22 @@ exports.getAllProducts = async (req, res) => {
 
 exports.getListSubcategory = async (req, res) => {
     try {
-        let page = req.query.page ? parseInt(req.query.page) : 1;
+        let page = req.query.page ? parseInt(req.query.page) : 1;//pagination parameters
         let limit = req.query.limit ? parseInt(req.query.limit) : 10;
 
         const offset = (page - 1) * limit;
 
-        let filter = req.query || {};
+        let filter = req.query || {};//for search entities
 
         let whereClause = {};
         // console.log('filter.subCategoryId', filter.subCategoryId)
 
-        if (filter.subCategoryId) {
+        if (filter.subCategoryId) {//fro catgaory wise search 
             whereClause.subCategoryId = filter.subCategoryId;
         }
         // console.log('filter.name', filter.name)
 
-        if (filter.name) {
+        if (filter.name) {// name wise search
             console.log('filter.name', filter.name)
             whereClause.name = {
                 [Op.like]: `%${filter.name}%`  // Assuming a fuzzy search on name
@@ -85,7 +79,7 @@ exports.getListSubcategory = async (req, res) => {
     }
 };
 
-exports.updateProduct = async (req, res) => {
+exports.updateProduct = async (req, res) => {//edit product 
     try {
         const { productId } = req.params; 
         const { name, subCategoryId, varientDetails, imageUrl, description } = req.body; 

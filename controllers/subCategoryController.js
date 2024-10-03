@@ -3,14 +3,14 @@ const { Op } = require('sequelize');
 
 exports.createSubCategory = async (req, res) => {
     try {
-        const { name, categoryId } = req.body;  // Destructure 'name' from the body
+        const { name, categoryId } = req.body;  
         console.log('req.body', req.body)
         // if (!name || categoryId) {
         //     return res.status(400).json({ error: "Sub category name or categoryId is required" });
         // }
         const duplicationcheck = await SubCategory.findOne({ name });
         console.log('duplicationcheck', duplicationcheck)
-        // if(duplicationcheck){
+        // if(duplicationcheck){//for search entities
         //     return res.status(400).json({ error: "Sub category name already exist" });
         // }
         const newSubCategory = await SubCategory.create({ name, categoryId });
@@ -30,7 +30,7 @@ exports.getAllSubCategories = async (req, res) => {
                 [Op.like]: `%${name}%` 
             };
         }
-        const subCategory = await SubCategory.findAndCountAll
+        const subCategory = await SubCategory.findAndCountAll//listing all sub category
             ({
                 where: whereClause
             });
