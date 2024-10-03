@@ -1,0 +1,1030 @@
+{
+	"info": {
+		"_postman_id": "4adc183a-71b5-49cc-ae6b-dc5214381434",
+		"name": "ecomer-seclob",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "creat category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"oo nj aas sef3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/categories/create-category",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"create-category"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "creat category",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"oo nj aas sef3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/categories/create-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"create-category"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-FoxwPzAg5e5C6e0LzrDUjghgkf4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:41:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Category name already exist\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"oo nj aas sef3\",\n    \"subCategoryId\":\"1\",\n    \"varientDetails\":\n       [\n       {\n        \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n        \"rom\":\"Gecc94wBbAjXTZsnaIUa\"\n       },\n        {\n        \"ram\": \"1\",\n        \"rom\":\"2\"\n       }\n       ],\n    \"imageUrl\":\n        [\n       {\n        \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n        \"rom\":\"Gecc94wBbAjXTZsnaIUa\"\n       },\n        {\n        \"ram\": \"1\",\n        \"rom\":\"2\"\n       }\n       ],\n       \"deiscription\":\"sadsas\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/product/create-product",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"create-product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "creat category",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"oo nj aas sef3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/categories/create-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"create-category"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-FoxwPzAg5e5C6e0LzrDUjghgkf4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:41:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Category name already exist\"\n}"
+				},
+				{
+					"name": "create product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"oo nj aas sef3\",\n    \"subCategoryId\":\"1\",\n    \"varientDetails\":\n       [\n       {\n        \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n        \"rom\":\"Gecc94wBbAjXTZsnaIUa\"\n       },\n        {\n        \"ram\": \"1\",\n        \"rom\":\"2\"\n       }\n       ],\n    \"imageUrl\":\n        [\n       {\n        \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n        \"rom\":\"Gecc94wBbAjXTZsnaIUa\"\n       },\n        {\n        \"ram\": \"1\",\n        \"rom\":\"2\"\n       }\n       ],\n       \"deiscription\":\"sadsas\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/product/create-product",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"create-product"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "272"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"110-KqtUR7G0Pm9n4Nx6CfugPfzU3Eg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Oct 2024 04:45:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"oo nj aas sef3\",\n    \"subCategoryId\": \"1\",\n    \"varientDetails\": [\n        {\n            \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n            \"rom\": \"Gecc94wBbAjXTZsnaIUa\"\n        },\n        {\n            \"ram\": \"1\",\n            \"rom\": \"2\"\n        }\n    ],\n    \"imageUrl\": [\n        {\n            \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n            \"rom\": \"Gecc94wBbAjXTZsnaIUa\"\n        },\n        {\n            \"ram\": \"1\",\n            \"rom\": \"2\"\n        }\n    ],\n    \"deiscription\": \"sadsas\"\n}"
+				}
+			]
+		},
+		{
+			"name": "creat category Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"oo nj aas sef3\",\n    \"CategoryId\": 1 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/sub-categories/create-sub-category",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sub-categories",
+						"create-sub-category"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "creat category Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"oo nj aas sef3\",\n    \"CategoryId\": 1 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/sub-categories/create-sub-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sub-categories",
+								"create-sub-category"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-uhBeeJTU48d5CqCUVs1decC17Ws\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:39:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"oo nj aas sef3\",\n    \"CategoryId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "user-signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"oo nj aas sef3\",\n    \"email\": \"ashil@yopmail.com\",\n    \"password\":\"adhil@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/user/sign-in",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "creat category Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"oo nj aas sef3\",\n    \"CategoryId\": 1 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/sub-categories/create-sub-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sub-categories",
+								"create-sub-category"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-uhBeeJTU48d5CqCUVs1decC17Ws\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:39:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"oo nj aas sef3\",\n    \"CategoryId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "login-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ashil@yopmail.com\",\n    \"password\":\"adhil@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/user/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "iph",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login-user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ashil@yopmail.com\",\n    \"password\":\"adhil@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/user/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "iph",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1124"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"464-231uASteOr5NuIOVh/95mc7yMG8\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Oct 2024 03:48:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"user\": {\n        \"id\": 1,\n        \"customerId\": \"b626d2aa-db53-406a-837e-a020834670eb\",\n        \"name\": \"oo nj aas sef3\",\n        \"email\": \"ashil@yopmail.com\",\n        \"password\": \"$2b$10$V.fHU0xkRAui7UjWiRN/iOtipkb3gWNT.c1T.YhXuODkLA.mXhoIa\",\n        \"token\": null,\n        \"refreshToken\": null\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiY3VzdG9tZXJJZCI6ImI2MjZkMmFhLWRiNTMtNDA2YS04MzdlLWEwMjA4MzQ2NzBlYiIsIm5hbWUiOiJvbyBuaiBhYXMgc2VmMyIsImVtYWlsIjoiYXNoaWxAeW9wbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRWLmZIVTB4a1JBdWk3VWpXaVJOL2lPdGlwa2IzZ1dOVC5jMVQuWWhYdU9Ea0xBLm1YaG9JYSIsInRva2VuIjpudWxsLCJyZWZyZXNoVG9rZW4iOm51bGwsImlhdCI6MTcyNzkyNzMxNSwiZXhwIjoxNzI3OTI3NjE1fQ.pYGW-m7eatL2QF0K5ghZqIO7TvSyliSzK0NFrio1dx0\",\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiY3VzdG9tZXJJZCI6ImI2MjZkMmFhLWRiNTMtNDA2YS04MzdlLWEwMjA4MzQ2NzBlYiIsIm5hbWUiOiJvbyBuaiBhYXMgc2VmMyIsImVtYWlsIjoiYXNoaWxAeW9wbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRWLmZIVTB4a1JBdWk3VWpXaVJOL2lPdGlwa2IzZ1dOVC5jMVQuWWhYdU9Ea0xBLm1YaG9JYSIsInRva2VuIjpudWxsLCJyZWZyZXNoVG9rZW4iOm51bGwsImlhdCI6MTcyNzkyNzMxNSwiZXhwIjoxNzI3OTMxMzE1fQ.jasWWoa2lEpZJTseIYeAg9ueAvUV06tbrKIrWXxFs60\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list prod - cat wise",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/product/catogory-list?subCategoryId=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"catogory-list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "adhil",
+							"disabled": true
+						},
+						{
+							"key": "subCategoryId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "creat category Copy 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/sub-categories/list-sub-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sub-categories",
+								"list-sub-category"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-HWL7cvqRbpLCLYLMHlRMJ5VHTpg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Sep 2024 17:42:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"oo nj aas sef3\",\n        \"categoryId\": 1\n    }\n]"
+				},
+				{
+					"name": "list all sub category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/sub-categories/list-sub-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sub-categories",
+								"list-sub-category"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "list prod - cat wise",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/product/catogory-list?page=2&limit=1&name=adhil",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"catogory-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "adhil"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "344"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"158-i6VVpJwl205hA4b3sRoNi6L8wNg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Oct 2024 02:27:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalItems\": 2,\n    \"totalPages\": 2,\n    \"currentPage\": 2,\n    \"pageSize\": 1,\n    \"products\": [\n        {\n            \"id\": 2,\n            \"name\": \"oo nj aas sef3\",\n            \"subCategoryId\": 1,\n            \"varientDetails\": [\n                {\n                    \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n                    \"rom\": \"Gecc94wBbAjXTZsnaIUa\"\n                },\n                {\n                    \"ram\": \"1\",\n                    \"rom\": \"2\"\n                }\n            ],\n            \"imageUrl\": [\n                {\n                    \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n                    \"rom\": \"Gecc94wBbAjXTZsnaIUa\"\n                },\n                {\n                    \"ram\": \"1\",\n                    \"rom\": \"2\"\n                }\n            ],\n            \"deiscription\": \"sadsas\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "list prod - cat wise",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/api/product/catogory-list?subCategoryId=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"catogory-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "adhil",
+									"disabled": true
+								},
+								{
+									"key": "subCategoryId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"150-uNLU5T3etfrLeKdoiAcECRfHOB8\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 03 Oct 2024 02:32:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalItems\": 1,\n    \"totalPages\": 1,\n    \"currentPage\": 1,\n    \"pageSize\": 10,\n    \"products\": [\n        {\n            \"id\": 1,\n            \"name\": \"adhil\",\n            \"subCategoryId\": 1,\n            \"varientDetails\": [\n                {\n                    \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n                    \"rom\": \"Gecc94wBbAjXTZsnaIUa\"\n                },\n                {\n                    \"ram\": \"1\",\n                    \"rom\": \"2\"\n                }\n            ],\n            \"imageUrl\": [\n                {\n                    \"ram\": \"DufG9owBbAjXTZsnbYUZ\",\n                    \"rom\": \"Gecc94wBbAjXTZsnaIUa\"\n                },\n                {\n                    \"ram\": \"1\",\n                    \"rom\": \"2\"\n                }\n            ],\n            \"deiscription\": \"sadsas\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "list all products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/sub-categories/list-product",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sub-categories",
+						"list-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list cat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/api/categories//list-category",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"",
+						"list-category"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/api/categories//list-category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								"",
+								"list-category"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"98-SiyTT3i8C07NHWZUpBa9Ij05of8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 24 Sep 2024 21:12:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"a\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"oo nj aas sef\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"oo nj aas sef3\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"oo nj aas sef3\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"oo nj aas sef3\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
