@@ -84,3 +84,28 @@ exports.getListSubcategory = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
+
+exports.updateProduct = async (req, res) => {
+    try {
+        const { productId } = req.params; 
+        const { name, subCategoryId, varientDetails, imageUrl, description } = req.body; 
+
+        const product = await Product.findOne({ where: { id:productId } });
+
+        if (!product) {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+
+        const updatedProduct = await product.update({
+            name: name || product.name,
+            subCategoryId: subCategoryId || product.subCategoryId,
+            varientDetails: varientDetails || product.varientDetails,
+            imageUrl: imageUrl || product.imageUrl,
+            description: description || product.description  
+        });
+
+        res.status(200).json(updatedProduct);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
