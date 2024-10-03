@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
+const jwt = require('jsonwebtoken');
 
 
 exports.signup = async (req, res) => {
@@ -53,11 +54,19 @@ exports.login = async (req, res) => {
         if (!userCheck) {
             return res.status(404).json({ error: 'User not found' });
         }
-        if (!PasswordCheck ) {
+        if (PasswordCheck === false ) {
             return res.status(401).json({ error: 'Invalid password' });
         }
+        const userPayload = userCheck.toJSON(); 
+        const token = jwt.sign(userPayload, process.env.SECRET, { expiresIn: process.env.TOKEN_LIFE });
+        console.log('token', token)
+        const refreshToken = jwt.sign(userPayload, process.env.REFRESH_TOKEN_SECRET, {
+            expiresIn: process.env.REFRESH_TOKEN_LIFE,
+        });
+        console.log('refreshToken', refreshToken)
 
-        res.json({ message: 'Login successful', user: userCheck });
+
+        res.json({ message: 'Login successful', user: userCheck , token, refreshToken});
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
