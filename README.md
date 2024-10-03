@@ -11,3 +11,6 @@ regarding mysql
 2. then via cmd type - npx sequelize-cli db:migrate
 
 Note :- added postman json file (included  responses also) - ecomer-seclob.postman_collection.json
+
+Db- tables looks like this
+![image](https://github.com/user-attachments/assets/2511dead-d73f-45cd-9f8b-7240f9499974)
